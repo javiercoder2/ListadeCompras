@@ -1,0 +1,11 @@
+<div id="main-container">
+
+<!--     Usamos el objeto total e item para traer siempre informacion respectiva y un event que provienen de component para cambio y borrar
+ -->    <app-total [total]="total" mensaje="Total a pagar: "></app-total>
+    <app-shopping-item 
+        *ngFor="let item of items" 
+        [item]="item"
+        (deleteItem)="deleteItem($event)"
+        (toggleItem)="toggleItem($event)">
+    </app-shopping-item>
+</div>
